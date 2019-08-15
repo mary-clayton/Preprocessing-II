@@ -168,6 +168,32 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+nav a {
+  text-decoration: none;
+  text-align: center;
+  margin: 5% 0%;
+  padding: 5%;
+  color: #000;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+header h1 {
+  padding: 1%;
+  margin-right: 50%;
+}
+header img {
+  padding-bottom: 3%;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
