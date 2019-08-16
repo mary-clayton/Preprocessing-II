@@ -1,13 +1,21 @@
-.home {
+@import "mixins";
+@import "variables";
 
+.head-img {
+  padding: 0% 5% 3% 10%;
+  width: 100%;
+}
+.home {
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    .about-content {
+      width: 48%;
+      padding-right: 1%;
+    }
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -57,5 +65,49 @@
       width: 30%;
       margin-bottom: 30px;
     }
+    .btn {
+      .button(#fff, #4d6c7b);
+      text-align: center;
+      padding: 5% 0;
+      width: 60%;
+    }
   }
-}// home
+  @media @phone {
+    .about-content {
+      padding-left: 10%;
+      border-bottom: 2px dashed @silver;
+    }
+    .content-section {
+      padding: 10%;
+      .text-content {
+        width: 100%;
+      }
+      .img-content {
+        width: 100%;
+      }
+    }
+
+    .inverse-content {
+      .text-content {
+        order: 0;
+        width: 100%;
+      }
+      .img-content {
+        order: 1;
+        width: 100%;
+      }
+    }
+    .content-pick {
+      display: flex;
+      flex-flow: column wrap;
+      .destination {
+        width: 80%;
+        padding-left: 20%;
+        .btn {
+          width: 100%;
+          padding: 5% 20%;
+        }
+      }
+    }
+  }
+} //home

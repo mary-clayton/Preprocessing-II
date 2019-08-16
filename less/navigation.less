@@ -1,31 +1,44 @@
 // Navigation Styles here
 @import "mixins";
 @import "variables";
+@phone: ~"(max-width: 500px)";
+
 nav {
     display: flex;
+    justify-content: space-between;
     justify-content: flex-end;
-    
-   
     .font-standard();
-    a {
-       
+    
+    .navlinks {
         text-decoration: none;
         text-align: center;
-        margin: 5% 0%;
-        padding: 5%;
+        font-size: 1.3rem;
+        padding: 2%;
         color: #000;
     }
-}
+  }
+    @media @phone {
+      nav {
+        margin-left:20%;
+        .navlinks {
+          margin-left: 20%;
+          width: 100%;
+        }
+      }
+    }     
 header {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
     width: 100%;
+    border-bottom: 2px dashed @navigation-border;
     h1{
       padding: 1%;
-      margin-right: 50%;
+      position: absolute;
     }
-    img {
-      padding-bottom: 3%;
+    @media @phone {
+      display: flex; 
+      flex-flow: column;
+      align-items: center;
+      nav {
+        margin-top: 10%;
+      }
     }
 }
